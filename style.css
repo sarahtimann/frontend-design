@@ -1,4 +1,18 @@
 article {
-    max-width: 65ch;
-    margin-inline: auto;
+  max-width: 65ch;
+  margin-inline: auto;
+}
+
+blockquote,
+img {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+}
+
+blockquote {
+  padding-left: 2rem;
+  padding-right: 2rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
 }
