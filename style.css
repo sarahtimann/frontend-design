@@ -27,6 +27,7 @@ article {
 
 .profile-text {
   display: flex;
+  flex-direction: column;
 }
 
 .svg-icons {
@@ -53,7 +54,11 @@ h2 {
 
 svg {
   color: #1b3b68;
-  width: 3rem;
+  width: 2rem;
+}
+
+.svg-icons svg {
+  margin-right: 1rem;
 }
 
 img {
