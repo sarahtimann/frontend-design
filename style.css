@@ -1,16 +1,103 @@
 :root {
-    --gray-50: #f9fafb;
-    --gray-100: #f3f4f6;
-    --gray-200: #e5e7eb;
-    --gray-300: #d1d5db;
-    --gray-400: #9ca3af;
-    --gray-500: #6b7280;
-    --gray-600: #4b5563;
-    --gray-700: #374151;
-    --gray-800: #1f2937;
-    --gray-900: #111827;
+  --gray-50: #f9fafb;
+  --gray-100: #f3f4f6;
+  --gray-200: #e5e7eb;
+  --gray-300: #d1d5db;
+  --gray-400: #9ca3af;
+  --gray-500: #6b7280;
+  --gray-600: #4b5563;
+  --gray-700: #374151;
+  --gray-800: #1f2937;
+  --gray-900: #111827;
+}
+
+:root {
+  --step--2: clamp(0.7035rem, 0.8131rem + -0.1414vw, 0.7813rem);
+  --step--1: clamp(0.9375rem, 0.9374rem + 0.0004vw, 0.9377rem);
+  --step-0: clamp(1.125rem, 1.0739rem + 0.2273vw, 1.25rem);
+  --step-1: clamp(1.35rem, 1.2206rem + 0.575vw, 1.6663rem);
+  --step-2: clamp(1.62rem, 1.3741rem + 1.0929vw, 2.2211rem);
+  --step-3: clamp(1.944rem, 1.5281rem + 1.8486vw, 2.9607rem);
+  --step-4: clamp(2.3328rem, 1.6726rem + 2.9343vw, 3.9467rem);
+  --step-5: clamp(2.7994rem, 1.7924rem + 4.4755vw, 5.2609rem);
+}
+
+:root {
+  --space-3xs: clamp(0.5625rem, 0.5369rem + 0.1136vw, 0.625rem);
+  --space-2xs: clamp(0.5625rem, 0.5369rem + 0.1136vw, 0.625rem);
+  --space-xs: clamp(0.875rem, 0.8494rem + 0.1136vw, 0.9375rem);
+  --space-s: clamp(1.125rem, 1.0739rem + 0.2273vw, 1.25rem);
+  --space-m: clamp(1.6875rem, 1.6108rem + 0.3409vw, 1.875rem);
+  --space-l: clamp(2.25rem, 2.1477rem + 0.4545vw, 2.5rem);
+  --space-xl: clamp(3.375rem, 3.2216rem + 0.6818vw, 3.75rem);
+  --space-2xl: clamp(4.5rem, 4.2955rem + 0.9091vw, 5rem);
+  --space-3xl: clamp(6.75rem, 6.4432rem + 1.3636vw, 7.5rem);
 }
 
 body {
-    font-family: system-ui, sans-serif;
+  font-family: system-ui, sans-serif;
 }
+
+article {
+  max-inline-size: 120ch; /* Optimal læsebredde */
+  margin-inline: auto; /* Centrerer containeren */
+  padding-inline: clamp(1rem, 5vw, 8rem); /* Skalerbar indre padding */
+  padding-block: var(--space-xl);
+}
+
+h1 {
+  font-size: var(--step-5);
+  color: var(--gray-900);
+  margin-block-start: var(--space-3xs);
+  margin-block-end: var(--space-m);
+}
+
+h2 {
+  font-size: var(--step-4);
+  color: var(--gray-800);
+  margin-block-start: var(--space-xl);
+}
+
+h3 {
+  font-size: var(--step-3);
+  color: var(--gray-700);
+  margin-block-start: var(--space-m);
+}
+
+p {
+  font-size: var(--step-0);
+  color: var(--gray-600);
+}
+
+/* p + p {
+  margin-block-start: var(--space-m);
+} */
+
+/* p {
+  margin-block-start: var(--space-s);
+} */
+
+p + p {
+  margin-block-start: var(--space-xs);
+}
+
+figcaption {
+  font-size: var(--step--1);
+  color: var(--gray-400);
+  margin-block-start: var(--space-2xs);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Paragraph som har figure efter sig */
+p:has(+ figure) {
+  margin-block-end: var(--space-xs);
+}
+
+/* p:has(a:nth-last-child(-n + 2)) {
+  color: var(--gray-400);
+} */
