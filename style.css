@@ -1,3 +1,4 @@
+/* Root for farver */
 :root {
   --gray-50: #f9fafb;
   --gray-100: #f3f4f6;
@@ -11,6 +12,7 @@
   --gray-900: #111827;
 }
 
+/* Root for font størrelser */
 :root {
   --step--2: clamp(0.7035rem, 0.8131rem + -0.1414vw, 0.7813rem);
   --step--1: clamp(0.9375rem, 0.9374rem + 0.0004vw, 0.9377rem);
@@ -22,6 +24,7 @@
   --step-5: clamp(2.7994rem, 1.7924rem + 4.4755vw, 5.2609rem);
 }
 
+/* Root for spacing */
 :root {
   --space-3xs: clamp(0.5625rem, 0.5369rem + 0.1136vw, 0.625rem);
   --space-2xs: clamp(0.5625rem, 0.5369rem + 0.1136vw, 0.625rem);
@@ -36,7 +39,7 @@
 
 body {
   font-family: system-ui, sans-serif;
-  line-height: 1.6; /* Base linjehøjde for hele dokumentet */
+  line-height: 1.6; /* Basis linjehøjde for hele dokumentet */
 }
 
 article {
@@ -83,14 +86,6 @@ p {
   color: var(--gray-600);
   line-height: 1.8; /* Optimal for læsbarhed af løbende tekst */
 }
-
-/* p + p {
-  margin-block-start: var(--space-m);
-} */
-
-/* p {
-  margin-block-start: var(--space-s);
-} */
 
 p + p {
   margin-block-start: var(--space-xs);
