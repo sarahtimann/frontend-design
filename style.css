@@ -52,6 +52,16 @@ h1 {
   margin-block-end: var(--space-m);
 }
 
+/* Lead text styling */
+.text-lead {
+  font-size: var(--step-1);
+  color: var(--gray-700);
+  font-weight: 500;
+  line-height: 1.6;
+  margin-block-start: var(--space-l);
+  margin-block-end: var(--space-l);
+}
+
 h2 {
   font-size: var(--step-4);
   color: var(--gray-800);
@@ -93,11 +103,56 @@ img {
   height: auto;
 }
 
+/* Figure styling */
+figure {
+  margin-block: var(--space-xl);
+  padding: var(--space-s);
+  background-color: var(--gray-50);
+  border-radius: 10px;
+  border: 1px solid var(--gray-200);
+}
+
 /* Paragraph som har figure efter sig */
 p:has(+ figure) {
   margin-block-end: var(--space-xs);
 }
 
-/* p:has(a:nth-last-child(-n + 2)) {
-  color: var(--gray-400);
-} */
+/* Links styling */
+a {
+  color: var(--gray-700);
+  text-decoration-color: var(--gray-300);
+  text-underline-offset: 3px;
+  transition: all 0.2s ease;
+}
+
+a:hover {
+  color: var(--gray-900);
+  text-decoration-color: var(--gray-600);
+}
+
+/* Small text styling */
+.text-small {
+  font-size: var(--step--1);
+  color: var(--gray-500);
+  margin-block-start: var(--space-m);
+}
+
+code {
+  font-family: "Courier New", Courier, monospace;
+  background-color: var(--gray-100);
+  padding: 0.1em 0.3em;
+  border-radius: 4px;
+  font-size: calc(var(--code-font-scale) * 1em);
+}
+
+/* Emphasis styling */
+strong,
+b {
+  color: var(--gray-800);
+  font-weight: 600;
+}
+
+em {
+  color: var(--gray-700);
+  font-style: italic;
+}
