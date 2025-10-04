@@ -139,7 +139,7 @@ footer {
     height: auto;
   }
 
-  svg {
+  .svg {
     color: grey;
     background-color: white;
     border-radius: 50%;
