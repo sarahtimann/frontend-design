@@ -28,6 +28,12 @@ const { id, question, answer, linkBlock } = props;
     color: hsl(190 30% 12%);
     border-bottom: 1px solid #dadada;
 
+    /* ::details-content {
+      transition: height 0.5s ease, content-visibility 0.5s ease allow-discrete;
+      height: 0;
+      overflow: clip;
+    } */
+
     summary {
       font-weight: 700;
       color: #181818;
@@ -58,6 +64,7 @@ const { id, question, answer, linkBlock } = props;
         }
       }
     }
+
 
     .answer {
       color: #595566;
