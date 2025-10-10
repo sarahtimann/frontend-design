@@ -24,9 +24,20 @@ const { id, question, answer, linkBlock } = props;
 </details>
 
 <style>
+  details[open] {
+    --r: 90deg;
+}
+
+/* summary .answer {
+transition: all 0.5s ease, content-visibility 0.5s ease allow-discrete;
+height: 0;
+overflow: clip;
+} */
+
   details {
     color: hsl(190 30% 12%);
     border-bottom: 1px solid #dadada;
+
 
     /* ::details-content {
       transition: height 0.5s ease, content-visibility 0.5s ease allow-discrete;
